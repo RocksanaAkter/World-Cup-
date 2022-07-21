@@ -12,12 +12,14 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .container {
     margin-top: 100px;
     background: #161616;
     border-radius: 30px;
+
 }
 
 /* top-part style  */
@@ -89,7 +91,7 @@ p {
 
 }
 
-/* -----bottom-part style-------  */
+/* bottom-part style  */
 .bottom-part {
     display: flex;
     align-items: row;
@@ -99,7 +101,6 @@ p {
     background-color: #FFFFFF;
 }
 
-/* side-button  */
 aside {
     margin-right: 24px;
 }
@@ -125,52 +126,61 @@ aside {
     margin-bottom: 15px;
 }
 
+.upcoming-m-button {
+    background-color: #DD0000;
+}
+
 .blogs {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 360px);
     gap: 24px;
 }
 
+
+
 .blog {
-    width: 312px;
+    display: felx;
+    justify-content: space-between;
+    gap: 20px;
 
     border: 1px solid rgb(242, 241, 241);
-    border-radius: 10px;
-
-}
-
-.blog-text {
-    padding: 20px;
-
-}
-
-.transfer-button {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    font-size: 16px;
-    background-color: white;
+    padding: 53px 30px;
     border-radius: 5px;
-    border: 2px solid black;
-    padding: 4px 16px;
 }
 
-.icons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    color: grey
+.flag {
+    display: flex;
+    justify-content: space-between;
+
 }
 
+.time {
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 40px;
+    color: #4D4D4D
+}
 
-.fa-clock,
-.fa-message {
+.country-name {
+    color: black;
+    text-align: center;
+    font-weight: 600;
     font-size: 20px;
+    padding-top: 20px;
 }
 
-span {
-    font-size: 20px;
 
-}
+
+
+
+
+
+
+
+
+
+
+
 
 /* footer style  */
 footer {
@@ -224,34 +234,4 @@ hr {
 .icon {
     font-size: 40px;
     color: white;
-}
-
-/* ---------media query----------  */
-/* tablet device  */
-@media only screen and (min-width:688px) and (max-width:992px) {
-    .bottom-part {
-        width: 100%;
-    }
-
-    main {
-        width: 100%;
-    }
-
-    .blogs {
-
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-    }
-
-    .blog {
-        flex-direction: column;
-    }
-
-    .side-button {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        background-color: none;
-    }
-
-
 }
